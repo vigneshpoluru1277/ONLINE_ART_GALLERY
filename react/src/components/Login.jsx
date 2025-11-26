@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +17,7 @@ export default function Login() {
         const user = res.data;
         localStorage.setItem('username', user.username);
         localStorage.setItem('role', user.role);
-        window.location.assign('/');
+        navigate('/', { replace: true });
       })
       .catch(err => {
         if (err.response) {
