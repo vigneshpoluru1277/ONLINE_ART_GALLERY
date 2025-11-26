@@ -4,7 +4,7 @@ services:
     container_name: mysql-dbl
     environment:
       MYSQL_ROOT_PASSWORD: ROOT
-      MYSQL_DATABASE: lab10p
+      MYSQL_DATABASE: artgallerydbf
     ports:
       - "3307:3306"
     volumes:
