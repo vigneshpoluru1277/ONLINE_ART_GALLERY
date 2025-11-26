@@ -27,7 +27,7 @@ services:
     image: vigneshpoluru1277/artgallery-frontend:latest
     container_name: react
     ports:
-      - "2001:80"
+      - "2002:80"
     depends_on:
       - backend
     restart: on-failure
